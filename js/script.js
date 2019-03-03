@@ -14,7 +14,7 @@ $('.more').click(function(event) {
 
 var scrollToElem = function(fromElem, toElem) {
   fromElem.on( 'click touch', function(){ 
-
+alert(1)
 if(toElem){
   $('html').animate({ 
     scrollTop: toElem.offset().top // прокручиваем страницу к требуемому элементу
