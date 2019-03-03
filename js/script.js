@@ -14,13 +14,21 @@ $('.more').click(function(event) {
 
 var scrollToElem = function(fromElem, toElem) {
   fromElem.on( 'click', function(){ 
-    var dest = toElem; // получаем направление
+
+if(toElem){
+  $('html').animate({ 
+    scrollTop: toElem.offset().top // прокручиваем страницу к требуемому элементу
+}, 1000 // скорость прокрутки
+);
+}
+
+    /*var dest = toElem; // получаем направление
     if(dest !== undefined && dest !== '') { // проверяем существование
         $('html').animate({ 
             scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
         }, 1000 // скорость прокрутки
         );
-    }
+    }//*/
     return false;
 });
 };
