@@ -13,7 +13,7 @@ $('.more').click(function(event) {
 });
 
 var scrollToElem = function(fromElem, toElem) {
-  fromElem.on( 'click', function(){ 
+  fromElem.on( 'click touch', function(){ 
 
 if(toElem){
   $('html').animate({ 
