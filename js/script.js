@@ -14,14 +14,9 @@ $('.more').click(function(event) {
 
 var scrollToElem = function(fromElem, toElem) {
   fromElem.on( 'click touch', function(){ 
+    goToElement(toElem.offset().top)
+  
 
-if(toElem){
-self.scroll({
- top: toElem.offset().top,
- left: 0,
-  behavior: 'smooth'
-});
-}
 
     /*var dest = toElem; // получаем направление
     if(dest !== undefined && dest !== '') { // проверяем существование
@@ -38,3 +33,22 @@ scrollToElem($('.scroll-kran'), $('.kran'));
 scrollToElem($('.scroll-evakuator'), $('.gruz-evakuator'));
 scrollToElem($('.scroll-samogruz'), $('.samogruz'));
 
+function goToElement(Y) {
+
+  var direction = 20;
+  if(window.scrollY > Y){
+    direction = -20;
+  }
+
+  if(Math.abs(window.scrollY - Y) > 50){
+    window.scrollTo(0, window.scrollY + direction);
+    setTimeout("goToElement("+Y+")", 10);
+  }else{
+    window.scroll({
+      top: Y,
+      left: 0,
+       behavior: 'smooth'
+     });
+  }
+
+}
