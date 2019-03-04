@@ -46,6 +46,22 @@ img {
     height: auto;
 }
 
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+ .item img{
+    width: auto;
+    height: 314px;
+}
+
 .mobile-hidden {
     display: none;
 }
@@ -83,7 +99,7 @@ img {
 .products__item h2 {
     color: #fec500;
     text-align: center;
-    font-size: 32px;
+    font-size: 28px;
     margin: 0 0 24px 0;
 }
 
@@ -124,11 +140,19 @@ img {
     margin: 0 auto;
 }
 
-/* .samogruz__item-info {
-    z-index: 10;
-    position: relative;
-    background: #fff;
-} */
+.reviews h2 {
+    text-align: center;
+}
+
+.map h2 {
+    text-align: center;
+}
+
+.map__address {
+    display: block;
+    text-align: center;
+}
+
 
 .kran h3 {
     text-align: center;
@@ -148,10 +172,58 @@ img {
     margin: 0 auto;
 }
 
+.about-us ul {
+    margin-top: 44px;
+}
+
 .about-us li {
     font-size: 16px;
-    padding-left: 30px;
-    margin-bottom: 20px;
+    padding-left: 60px;
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.about-us li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    top: -4px;
+}
+
+.about-us li:nth-of-type(1)::before {
+    background-image: url(../img/icon/we1.png);
+}
+
+.about-us li:nth-of-type(2)::before {
+    background-image: url(../img/icon/we2.png);
+}
+
+.about-us li:nth-of-type(3)::before {
+    background-image: url(../img/icon/we3.png);
+}
+
+.about-us li:nth-of-type(4)::before {
+    background-image: url(../img/icon/we4.png);
+    top: 16px;
+    height: 40px;
+}
+
+.about-us li:nth-of-type(5)::before {
+    background-image: url(../img/icon/we5.png);
+}
+
+.about-us li:nth-of-type(6)::before {
+    background-image: url(../img/icon/we6.png);
+    top: 12px;
+}
+
+.about-us li:nth-of-type(7)::before {
+    background-image: url(../img/icon/we7.png);
 }
 
 .map iframe {
@@ -174,14 +246,90 @@ img {
     font-weight: 500;
 }
 
+.close-mh {
+    display: none;
+}
+
 .more-hidden li {
     padding-bottom: 6px;
 }
 
+.contacts-item {
+    padding-left: 34px;
+    padding-bottom: 6px;
+    position: relative;
+}
+
+.contacts-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.contacts-item:nth-of-type(1)::before{
+    background-image: url(../img/icon/time.png);
+    left: 2px;
+}
+
+.contacts-item:nth-of-type(2)::before{
+    background-image: url(../img/icon/tel.png);
+    background-size: 18px;
+}
+
+.contacts-item:nth-of-type(3)::before{
+    background-image: url(../img/icon/geo.png);
+    background-size: 15px;
+}
+
+.contacts-item:nth-of-type(4)::before{
+    background-image: url(../img/icon/whatsapp.png);
+}
+
+.reviews-flamp {
+    padding-top: 30px;
+    font-size: 14px;
+    position: relative;
+}
+
+.reviews-flamp::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 7px;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-image: url(../img/icon/flamp.png);
+}
+
 @media(min-width: 1024px) {
-    body {
-        font-size: 24px;
+
+    .main-header {
+        padding-bottom: 60px;
     }
+
+    .about-us ul {
+        width: 320px;
+    }
+
+    .about-us {
+        background-color: #ccc;
+        background-image: url(../img/about-us-bg.png);
+        background-size: 616px 602px;
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    /* body { */
+        /* font-size: 24px; */
+    /* } */
 
     .mobile-hidden {
         display: block;
@@ -205,9 +353,9 @@ img {
     .main-header__contacts {
         display: flex;
         flex-wrap: wrap;
-        width: 456px;
+        width: 416px;
         justify-content: space-between;
-        margin-right: 70px;
+        margin-right: 100px;
     }
 
     .links {
@@ -223,21 +371,53 @@ img {
         flex-wrap: wrap;
         justify-content: space-between;
         padding-top: 0;
+        transform: translateY(-64px);
     }
 
     .products__item {
         margin-top: 0;
+        margin-bottom: 0;
     }
 
-    .products__item img {
+    .products__item {
         width: 300px;
+        min-height: 444px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .products__item:nth-of-type(1) img {
+        width: 280px;
         height: 240px;
+        margin: 0 auto 30px;
+    }
+
+    .products__item:nth-of-type(2) img {
+        width: 280px;
+        height: 210px;
+        margin: 0 auto 30px;
+    }
+
+    .products__item:nth-of-type(3) img {
+        width: 280px;
+        height: 176px;
+        margin: 0 auto 30px;
+    }
+
+    .products__item h2 {
+        margin-bottom: 46px;
+        margin-bottom: auto;
     }
 
     .samogruz {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    .samogruz h2 {
+        width: 100%;
     }
 
     .samogruz__item {
@@ -247,6 +427,10 @@ img {
     .samogruz__item img {
         width: 440px;
         margin: 0 auto;
+    }
+
+    .samogruz__item:nth-of-type(2) img {
+        margin-left: 24px;
     }
 
     .samogruz__item-info {
@@ -266,21 +450,22 @@ img {
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 0;
-        min-height: 572px;
+        min-height: 474px;
     }
 
-    .kran img, .gruz-evakuator img {
+    .kran img {
         order: 1;
-        width: 620px;
+        width: 588px;
+        height: 428px;
         align-self: center;
     }
 
     .gruz-evakuator img {
         height: 214px;
-    }
-
-    .kran img {
-        height: 490px;;
+        order: 1;
+        width: 588px;
+        /* height: 428px; */
+        align-self: center;
     }
 
     .kran__info, .gruz-evakuator__info {
@@ -328,4 +513,40 @@ img {
     .map iframe {
         height: 400px;
     }
+
+    .close-mh {
+        display: block;
+        position: absolute;
+        right: 8px;
+        top: 10px;
+        background: transparent url(../img/icon/close.svg) no-repeat;
+        background-size: 12px;
+        border: none;
+        width: 12px;
+        height: 12px;
+
+    }
+
+    
+    .gallery {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    main .yel-line {
+        text-align: left;
+        position: relative;
+        font-size: 28px;
+    }
+
+    .yel-line::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        width: 55px;
+        height: 6px;
+        background-color: #fdc400;
+    }
+
 }

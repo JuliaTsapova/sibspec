@@ -3,13 +3,24 @@ if(screen.width >= 1024) {
   $('.kran .desktop-more').css('border-radius', '0');
   $('.gruz-evakuator .desktop-more').css('border-radius', '0');
   $('.gruz-evakuator .desktop-more').css('background-color', '#fff');
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      nav: false,
+      items: 3,
+      loop: true,
+      margin: 10,
+      video: true
+      // autoWidth: true
+    });
+  });
 }
 
 $('.more').click(function(event) {
-  // event.preventDefault();
-  // console.log($(event.target).parent().find('.more-hidden'))
-  
-  $(this).next().slideDown(1000);
+    $(this).next().slideToggle("slow");
+});
+
+$('.close-mh').click(function(event) {
+  $(this).parent().slideToggle("slow");
 });
 
 var scrollToElem = function(fromElem, toElem) {
@@ -52,3 +63,14 @@ function goToElement(Y) {
   }
 
 }
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    nav: true,
+    items: 1,
+    loop: true,
+    margin: 10,
+    video: true
+    // autoWidth: true
+  });
+});
