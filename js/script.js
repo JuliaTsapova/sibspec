@@ -13,7 +13,19 @@ if(screen.width >= 1024) {
       // autoWidth: true
     });
   });
+
+  $('.order').click(function(event){
+    event.preventDefault();
+    $(event.target).text('8 (913) 985 24 14');
+  });
 }
+
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true,
+  'alwaysShowNavOnTouchDevices': true,
+  'Wraparound': true
+});
 
 $('.more').click(function(event) {
     $(this).next().slideToggle("slow");

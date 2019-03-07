@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
         <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/lightbox.min.css">
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     </head>
     <body>
@@ -29,18 +30,21 @@
             <div class="products">
                 <section class="products__item">
                     <h2>Автокран</h2>
+                    <div class="products__item-bg"></div>
                     <img src="img/kran.png" alt="Автокран">
                     <a class="order btn" href="tel:+73832132414">Заказать</a>
                     <button class="more btn scroll-kran" type="button">Подробнее</button>
                 </section>
                 <section class="products__item">
                     <h2>Грузовой эвакуатор</h2>
+                    <div class="products__item-bg"></div>
                     <img src="img/evakuator.png" alt="Грузовой эвакуатор">
                     <a class="order btn" href="tel:+73832132414">Заказать</a>
                     <button class="more btn scroll-evakuator" type="button">Подробнее</button>
                 </section>
                 <section class="products__item">
                     <h2>Самогруз</h2>
+                    <div class="products__item-bg"></div>
                     <img src="img/samogruz.png" alt="Самогруз">
                     <a class="order btn" href="tel:+73832132414">Заказать</a>
                     <button class="more btn scroll-samogruz" type="button">Подробнее</button>
@@ -215,20 +219,20 @@
             <section class="gallery">
                 <h2 class="yel-line">Галерея</h2>
                 <div class="owl-carousel owl-theme owl-height">
-                    <div class="item"><img src="img/gallery/img1.JPG" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img2.JPG" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img16.JPG" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img4.JPG" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img5.jpg" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img6.jpg" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img7.jpg" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img8.jpg" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img9.jpg" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img10.jpg" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img19.JPG" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img12.jpg" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img17.JPG" alt="gallery-img"></div>
-                    <div class="item"><img src="img/gallery/img18.JPG" alt="gallery-img"></div>
+                    <div class="item"><a href="img/gallery/img1.JPG" data-lightbox="roadtrip"><img src="img/gallery/img1.JPG" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img2.JPG" data-lightbox="roadtrip"><img src="img/gallery/img2.JPG" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img16.JPG" data-lightbox="roadtrip"><img src="img/gallery/img16.JPG" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img4.JPG" data-lightbox="roadtrip"><img src="img/gallery/img4.JPG" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img5.jpg" data-lightbox="roadtrip"><img src="img/gallery/img5.jpg" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img6.jpg" data-lightbox="roadtrip"><img src="img/gallery/img6.jpg" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img7.jpg" data-lightbox="roadtrip"><img src="img/gallery/img7.jpg" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img8.jpg" data-lightbox="roadtrip"><img src="img/gallery/img8.jpg" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img9.jpg" data-lightbox="roadtrip"><img src="img/gallery/img9.jpg" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img10.jpg" data-lightbox="roadtrip"><img src="img/gallery/img10.jpg" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img19.JPG" data-lightbox="roadtrip"><img src="img/gallery/img19.JPG" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img12.jpg" data-lightbox="roadtrip"><img src="img/gallery/img12.jpg" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img17.JPG" data-lightbox="roadtrip"><img src="img/gallery/img17.JPG" alt="gallery-img"></a></div>
+                    <div class="item"><a href="img/gallery/img18.JPG" data-lightbox="roadtrip"><img src="img/gallery/img18.JPG" alt="gallery-img"></a></div>
                 </div>
             </section>
             <section class="reviews">
@@ -246,16 +250,17 @@
                 <div class="links">
                 <ul class="main-footer__contacts">
                     <li class="contacts-item contacts-item--time">08:00 - 20:00</li>
-                    <li class="contacts-item contacts-item--city">новосибирск</li>
-                    <li class="contacts-item contacts-item--phone"><a title="PhoneNumber" href="tel:+73832132414">8 (383) 213 24 14</a></li>
+                    <li class="contacts-item contacts-item--phone mobile-hidden"><a title="PhoneNumber" href="tel:+73832132414">8 (383) 213 24 14</a></li>
+                    <li class="contacts-item contacts-item--city mobile-hidden">НОВОСИБИРСК</li>
                     <li class="contacts-item contacts-item--wa"><a title="WhatsApp" href="whatsapp://send?phone=+79139852414">8 (913) 985 24 14</a></li>
                 </ul>
-                <a class="footer__reviews" title="reviews" href="https://novosibirsk.flamp.ru/firm/sibirspec_firma_po_uslugam_zakaza_i_ehvakuacii_spectekhniki-70000001007154537">отзывы</a>
+                <a class="footer__reviews reviews-flamp" title="reviews" href="https://novosibirsk.flamp.ru/firm/sibirspec_firma_po_uslugam_zakaza_i_ehvakuacii_spectekhniki-70000001007154537">отзывы</a>
             </div>
             </div>
         </footer>
         <script src="js/jquery.min.js"></script>
-        <script src="js/script.js"></script>
+        <script src="js/lightbox.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
