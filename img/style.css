@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #fec500;
+    font-size: 34px;
+}
+
+.btn {
+    display: block;
+    width: 208px;
+    border-radius: 20px;
+    background: red;
+    border: none;
+    margin: 20px;
+    padding: 7px;
+    text-align: center;
+    font-size: 18px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    margin: 20px auto;
+}
+
+.tel  {
+    background: #058d05;
+}
+
+.more {
+    background: #d57d01;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}

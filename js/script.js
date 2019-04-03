@@ -38,17 +38,7 @@ $('.close-mh').click(function(event) {
 var scrollToElem = function(fromElem, toElem) {
   fromElem.on( 'click touch', function(){ 
     goToElement(toElem.offset().top)
-  
-
-
-    /*var dest = toElem; // получаем направление
-    if(dest !== undefined && dest !== '') { // проверяем существование
-        $('html').animate({ 
-            scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-        }, 1000 // скорость прокрутки
-        );
-    }//*/
-    return false;
+      return false;
 });
 };
 

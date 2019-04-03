@@ -20,7 +20,8 @@ html {
     *, 
     ::after, 
     ::before { 
-    box-sizing: inherit; 
+    -webkit-box-sizing: inherit; 
+            box-sizing: inherit; 
 }
 
 body {
@@ -35,6 +36,10 @@ ul {
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+ol {
+    list-style: disc;
 }
 
 a {
@@ -55,6 +60,18 @@ img {
 	height: 1px !important;
 	width: 1px !important;
 	overflow: hidden;
+}
+
+.marker {
+    list-style: circle;
+}
+
+.designer {
+    position: absolute;
+    bottom: -20px;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: calc(50% - 85px);
 }
 
  .item img{
@@ -82,10 +99,15 @@ img {
 }
 
 .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 20px;
     color: #fff;
+    position: relative;
 }
 
 .links a {
@@ -248,8 +270,6 @@ img {
     border-radius: 20px;
     padding: 14px;
     margin-top: 30px;
-    /* transition: transform 1s ease-in-out; */
-    /* transform: translateY(-100%); */
     display: none;
 }
 
@@ -344,10 +364,6 @@ img {
         padding-left: 40px;
     }
 
-    /* body { */
-        /* font-size: 24px; */
-    /* } */
-
     .mobile-hidden {
         display: block;
     }
@@ -357,9 +373,14 @@ img {
     }
 
     .main-header__content-wr {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .main-header__logo {
@@ -368,10 +389,15 @@ img {
     }
 
     .main-header__contacts {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         width: 416px;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin-right: 100px;
     }
 
@@ -384,11 +410,18 @@ img {
     }
 
     .products {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding-top: 0;
-        transform: translateY(-64px);
+        -webkit-transform: translateY(-64px);
+            -ms-transform: translateY(-64px);
+                transform: translateY(-64px);
     }
 
     .products__item {
@@ -399,9 +432,16 @@ img {
     .products__item {
         width: 300px;
         min-height: 444px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         position: relative;
     }
 
@@ -429,9 +469,14 @@ img {
     }
 
     .samogruz {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .samogruz h2 {
@@ -464,26 +509,39 @@ img {
     }
 
     .kran, .gruz-evakuator {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         padding: 0;
         min-height: 474px;
     }
 
     .kran img {
-        order: 1;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
         width: 588px;
         height: 428px;
-        align-self: center;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
     }
 
     .gruz-evakuator img {
         height: 214px;
-        order: 1;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
         width: 588px;
         /* height: 428px; */
-        align-self: center;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
     }
 
     .kran__info, .gruz-evakuator__info {
@@ -491,6 +549,7 @@ img {
         padding: 40px;
         position: relative;
         min-width: 324px;
+        padding-bottom: 200px;
     }
 
     .kran__info .order, .gruz-evakuator__info .order {
@@ -580,8 +639,11 @@ img {
         background-color:rgba(0,0,0, 0.1);
         width: 100%;
         height: 100%;
-        transform: translateY(30px);
-        box-shadow: 0 0 8px 4px rgba(0,0,0,0.1);
+        -webkit-transform: translateY(30px);
+            -ms-transform: translateY(30px);
+                transform: translateY(30px);
+        -webkit-box-shadow: 0 0 8px 4px rgba(0,0,0,0.1);
+                box-shadow: 0 0 8px 4px rgba(0,0,0,0.1);
         border-radius: 5px;
     }
     
@@ -590,16 +652,19 @@ img {
     }
 
     .main-footer__contacts {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         width: 416px;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin-right: 82px;
     }
 
     .main-footer__contacts .contacts-item:nth-of-type(1)::before {
         left: 2px;
-    }
-
-    
+    }    
 }
