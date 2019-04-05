@@ -45,6 +45,7 @@ var scrollToElem = function(fromElem, toElem) {
 scrollToElem($('.scroll-kran'), $('.kran'));
 scrollToElem($('.scroll-evakuator'), $('.gruz-evakuator'));
 scrollToElem($('.scroll-samogruz'), $('.samogruz'));
+scrollToElem($('.to-top'), $('header'));
 
 function goToElement(Y) {
 

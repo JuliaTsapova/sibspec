@@ -74,6 +74,26 @@ img {
     margin-left: calc(50% - 85px);
 }
 
+.to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0, 0.2);
+    border: none;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.to-top svg {
+    transform: rotate(270deg);
+}
+
+.to-top:hover, .to-top:focus {
+    background: rgba(0,0,0, 0.4);
+}
+
  .item img{
     width: auto;
     height: 314px;
@@ -346,6 +366,11 @@ img {
 }
 
 @media(min-width: 1024px) {
+
+    .to-top {
+        right: 40px;
+        bottom: 40px;
+    }
 
     .main-header {
         padding-bottom: 60px;
